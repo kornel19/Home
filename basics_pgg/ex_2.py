@@ -7,3 +7,10 @@ First name: John
 Height: 180
 """
 
+first_name = input("Provide your first name: ")
+height = 180
+
+print('First name: ' + first_name)
+# print('Height: ' + height)
+print('Height:', height)
+print('Height: ' + str(height))
