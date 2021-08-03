@@ -9,6 +9,8 @@ Weight: 2.5
 Total price: 25.0
 """
 
+# input returns string (not a number) and we have to convert string
+# to float, so we can make mathematical operations with mathematical operators like *
 price = float(input('Provide price per kg: '))
 weight = float(input('Provide weight: '))
 print(type(price), type(weight))
