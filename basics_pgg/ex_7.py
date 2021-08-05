@@ -7,3 +7,14 @@ y =
 z =
 """
 
+x = int(input('Provide x: '))
+y = int(input('Provide y: '))
+z = int(input('Provide z: '))
+
+# calculations
+volume =
+bigger_than_liter =
+
+# output
+print(f'Volume: {}')
+print(f'Bigger than liter? {}')
