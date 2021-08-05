@@ -49,3 +49,28 @@ first_name = "Piotr"
 print(first_name)
 first_name = 'Tom'
 print(first_name)
+
+
+print('-'*60)
+
+# Comparison operators
+# always return bool value -> True/False
+print(1 == 1)  # equality operator: ==  whereas = is assignment operator
+print(1 != 1)
+print(1 > 1)
+print(1 < 1)
+print(1 >= 1)
+print(1 <= 1)
+
+# Assignment operators
+print('-'*30)
+number = 10
+# number + 5 -> this will not change the value in variable number
+number = number + 5
+number += 5
+number += 1
+number -= 1
+number *= 5
+number /= 10
+number **= 2
+print(number)
