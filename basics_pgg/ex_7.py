@@ -12,9 +12,9 @@ y = int(input('Provide y: '))
 z = int(input('Provide z: '))
 
 # calculations
-volume =
-bigger_than_liter =
+volume = x * y * z
+bigger_than_liter = volume > 1000
 
 # output
-print(f'Volume: {}')
-print(f'Bigger than liter? {}')
+print(f'Volume: {volume}')
+print(f'Bigger than liter? {bigger_than_liter}')
