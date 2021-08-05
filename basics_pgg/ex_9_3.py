@@ -28,5 +28,8 @@ else:
 
 if result is None:
     print('Sorry, you\'ve provided invalid operation')
+    print("Sorry, you\"ve provided invalid operation")
+    print("Sorry, you've provided invalid operation")
+    print('Sorry, you"ve provided invalid operation')
 else:
     print(f'{number_1} {operation} {number_2} = {result}')
