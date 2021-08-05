@@ -16,12 +16,17 @@ number_2 = float(input('Enter the second number: '))
 operation = input('Enter the type of operation (+, -, *, /): ')
 
 if operation == '+':
-    print(number_1 + number_2)
+    result = number_1 + number_2
 elif operation == '-':
-    print(number_1 - number_2)
+    result = number_1 - number_2
 elif operation == '*':
-    print(number_1 * number_2)
+    result = number_1 * number_2
 elif operation == '/':
-    print(number_1 / number_2)
+    result = number_1 / number_2
 else:
-    print('invalid operator')
+    result = None
+
+if result is None:
+    print('Sorry, you\'ve provided invalid operation')
+else:
+    print(f'{number_1} {operation} {number_2} = {result}')

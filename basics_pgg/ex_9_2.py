@@ -12,16 +12,21 @@ Result: 15
 """
 
 number_1 = float(input('Enter the first number: '))
+number_1 = round(number_1, 2)
+print(number_1)
+
 number_2 = float(input('Enter the second number: '))
+number_2 = round(number_2, 2)
+print(number_2)
 operation = input('Enter the type of operation (+, -, *, /): ')
 
 if operation == '+':
-    print(number_1 + number_2)
+    print(round(number_1 + number_2, 2))
 elif operation == '-':
-    print(number_1 - number_2)
+    print(round(number_1 - number_2, 2))
 elif operation == '*':
-    print(number_1 * number_2)
+    print(round(number_1 * number_2, 2))
 elif operation == '/':
-    print(number_1 / number_2)
+    print(round(number_1 / number_2, 2))
 else:
     print('invalid operator')
