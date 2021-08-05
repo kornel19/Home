@@ -74,3 +74,12 @@ number *= 5
 number /= 10
 number **= 2
 print(number)
+
+# Logical operators
+print('-'*30)
+print(True and True)
+print(False or True)
+print(not False)
+print( (True and False) or (False or True) )
+print( False or True )
+print( True )
