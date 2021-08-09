@@ -7,8 +7,8 @@
 
 
 shoes_left = int(input('When you left your shoes at the shoemaker? (Monday=1, Sunday=7): '))
-repair = int(input('What is the waiting time for repair in days?: '))
-pickup = shoes_left + repair / 7
+repair_time = int(input('What is the waiting time for repair in days?: '))
+pickup = shoes_left + repair_time / 7
 
 
 if pickup >= 0.14:
