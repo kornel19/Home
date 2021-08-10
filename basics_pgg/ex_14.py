@@ -24,7 +24,15 @@ STAGE 3 - number of tries/steps
 1. Define proper variable before the loop
 2. After each move we are incrementing this value in this variable
 3. If players position and treasure position is the same, then he won the game and we show how many moves he did.
+
+STAGE 4 - hot&cold
+https://www.calculatorsoup.com/calculators/geometry-plane/distance-two-points.php
+1. Calculate the distance BEFORE players move.
+2. Calculate the distance AFTER players move.
+3. Based on those two values we show to the user information if he's getting closer or further from the treasure.
 """
+
+from math import sqrt
 
 player_x = 4
 player_y = 4
@@ -35,6 +43,9 @@ treasure_y = 6
 moves = 0
 
 while True:
+    # calculate distance before the move
+    distance_before = sqrt( (treasure_x-player_x) ** 2 + (treasure_y-player_y) ** 2 )
+
     print(f'Your position is {player_x} {player_y}')
 
     direction = input('Direction (w,s,a,d): ')
@@ -63,5 +74,9 @@ while True:
     if not (0 <= player_x <= 10) or not (0 <= player_y <= 10):
         print('You are outside of the board! Game over!')
         break
+
+    # calculate distance after the move
+
+    # show to the user if he's getting closer or further from the treasure
 
 
