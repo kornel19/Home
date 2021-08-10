@@ -83,3 +83,14 @@ print(not False)
 print( (True and False) or (False or True) )
 print( False or True )
 print( True )
+
+print('-'*60)
+
+# while - loop
+
+i = 0
+while i < 10:
+    print(i)
+    i = i + 1  # if we delete this line, we will end with infinite loop, because the condition is always True
+
+print('I am outside of the while loop')
