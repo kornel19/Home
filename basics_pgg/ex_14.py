@@ -16,18 +16,43 @@ STAGE 1 - moving around the board
 - asking the user about move direction (w, s, a, d)
 - change the direction or inform the user that the direction is incorrect
 
+STAGE 2 - Check users position
+1. If the user moved outside of the board we are ending the game
+2. If users position (x, y) are the same as treasures position (x, y) inform the user that he won and end the game
 """
 
-# define treasure x and y coordinates in separate variables
-# define user x and y coordinates in separate variables
 player_x = 4
 player_y = 4
 
 treasure_x = 6
 treasure_y = 6
 
-# while True loop where the whole game will happen
 while True:
-    # display where the user is
+    print(f'Your position is {player_x} {player_y}')
 
-    # ask where he wants to go
+    direction = input('Direction (w,s,a,d): ')
+
+    if direction == 'w':
+        player_y += 1
+    elif direction == 's':
+        player_y -= 1
+    elif direction == 'a':
+        player_x -= 1
+    elif direction == 'd':
+        player_x += 1
+    else:
+        print('Wrong direction. Use w, s, a, d')
+        continue
+
+    # we should check players and treasure position
+    if player_x == treasure_x and player_y == treasure_y:
+        print('Congrats! You have found a treasure!!! Good job!')
+        break
+
+    # check if the user is outside of the board -> game over
+    # if player_x < 0 or player_x > 10 or player_y < 0 or player_y > 10:
+    if not (0 <= player_x <= 10) or not (0 <= player_y <= 10):
+        print('You are outside of the board! Game over!')
+        break
+
+
