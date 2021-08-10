@@ -19,6 +19,11 @@ STAGE 1 - moving around the board
 STAGE 2 - Check users position
 1. If the user moved outside of the board we are ending the game
 2. If users position (x, y) are the same as treasures position (x, y) inform the user that he won and end the game
+
+STAGE 3 - number of tries/steps
+1. Define proper variable before the loop
+2. After each move we are incrementing this value in this variable
+3. If players position and treasure position is the same, then he won the game and we show how many moves he did.
 """
 
 player_x = 4
@@ -26,6 +31,8 @@ player_y = 4
 
 treasure_x = 6
 treasure_y = 6
+
+moves = 0
 
 while True:
     print(f'Your position is {player_x} {player_y}')
@@ -44,9 +51,11 @@ while True:
         print('Wrong direction. Use w, s, a, d')
         continue
 
+    moves += 1  # counting only valid moves
+
     # we should check players and treasure position
     if player_x == treasure_x and player_y == treasure_y:
-        print('Congrats! You have found a treasure!!! Good job!')
+        print(f'Congrats! You have found a treasure in {moves} moves!!! Good job!')
         break
 
     # check if the user is outside of the board -> game over
