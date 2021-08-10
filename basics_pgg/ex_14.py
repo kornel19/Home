@@ -33,15 +33,19 @@ https://www.calculatorsoup.com/calculators/geometry-plane/distance-two-points.ph
 
 STAGE 5 - do not show hint with 1/5 probability
 1. use randint(1,5) - if the number we get is different than 5 then we do show the hint.
+
+STAGE 6 - draw players and treasure position at the beginning of the game
+1. use randint() function.
 """
 
 from math import sqrt
+from random import randint
 
-player_x = 4
-player_y = 4
+player_x = randint(0, 10)
+player_y = randint(0, 10)
 
-treasure_x = 6
-treasure_y = 6
+treasure_x = randint(0, 10)
+treasure_y = randint(0, 10)
 
 moves = 0
 
@@ -82,7 +86,10 @@ while True:
     distance_after = sqrt( (treasure_x-player_x) ** 2 + (treasure_y-player_y) ** 2 )
 
     # show to the user if he's getting closer or further from the treasure
-    if distance_after < distance_before:
-        print('You are getting CLOSER')
+    if randint(1, 5) != 5:
+        if distance_after < distance_before:
+            print('You are getting CLOSER')
+        else:
+            print('You are getting FURTHER from the treasure')
     else:
-        print('You are getting FURTHER from the treasure')
+        print('No hint this time...')
