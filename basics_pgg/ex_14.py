@@ -30,6 +30,9 @@ https://www.calculatorsoup.com/calculators/geometry-plane/distance-two-points.ph
 1. Calculate the distance BEFORE players move.
 2. Calculate the distance AFTER players move.
 3. Based on those two values we show to the user information if he's getting closer or further from the treasure.
+
+STAGE 5 - do not show hint with 1/5 probability
+1. use randint(1,5) - if the number we get is different than 5 then we do show the hint.
 """
 
 from math import sqrt
@@ -76,7 +79,10 @@ while True:
         break
 
     # calculate distance after the move
+    distance_after = sqrt( (treasure_x-player_x) ** 2 + (treasure_y-player_y) ** 2 )
 
     # show to the user if he's getting closer or further from the treasure
-
-
+    if distance_after < distance_before:
+        print('You are getting CLOSER')
+    else:
+        print('You are getting FURTHER from the treasure')
