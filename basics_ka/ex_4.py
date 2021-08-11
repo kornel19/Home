@@ -1,7 +1,0 @@
-citya = str(input("Write city A"))
-cityb = str(input("Write city B"))
-distance_ab = float(input("Write distance A to B"))
-fuelprice = float(input("Write fuel price"))
-fuel_used_100km = float(input("Write fuel consumption per 100KM"))
-cost = str(fuelprice*fuel_used_100km*distance_ab/100)
-print("The cost of the gas for the trip "+citya+" to "+cityb+"is"+cost)
