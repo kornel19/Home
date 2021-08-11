@@ -36,6 +36,14 @@ STAGE 5 - do not show hint with 1/5 probability
 
 STAGE 6 - draw players and treasure position at the beginning of the game
 1. use randint() function.
+
+STAGE 7 - moving the treasure after making to many moves
+1. Before the loop count the minimal distance between the users and treasure position. We can use abs() function.
+2. After the move we can check if the number of moves is bigger than 2x minimum number of moves.
+3. if so:
+- draw new position of the treasure (x, y)
+- count minimum number of moves once again (for the new treasure position)
+- reset the number of moves variable (assign 0)
 """
 
 from math import sqrt
