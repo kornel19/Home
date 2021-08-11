@@ -7,7 +7,7 @@
 # If Lassie was a human, would have 15 years.
 
 name= input('Provide name of your dog: ')
-age= int(input('Provide dog age: '))
+age= int (input('Provide dog age: '))
 calculation = 5 * age
 
 print(f'If {name} was a human, would have {calculation} age.')

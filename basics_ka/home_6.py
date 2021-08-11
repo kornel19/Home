@@ -15,10 +15,10 @@ adult = 3.80
 pensioner = 1.90
 
 if age >= 0 and age < 7:
-    print(f'You should buy kindergarten ticket the price of which is {kindergarten * number:.2f}')
+    print(f'You should buy kindergarten ticket. The total price is {kindergarten * number:.2f}')
 elif age >= 7 and age < 18:
-    print(f'You should buy kindergarten ticket the price of which is {school * number:.2f}')
+    print(f'You should buy school ticket. The total price is {school * number:.2f}')
 elif age >= 18 and age < 65:
-    print(f'You should buy kindergarten ticket the price of which is {adult * number:.2f}')
+    print(f'You should buy adult ticket. The total price is {adult * number:.2f}')
 elif age >= 65:
-    print(f'You should buy kindergarten ticket the price of which is {pensioner * number:.2f}')
+    print(f'You should buy pensioner ticket. The total price is {pensioner * number:.2f}')

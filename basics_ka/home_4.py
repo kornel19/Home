@@ -18,19 +18,19 @@ cost_3 = 180
 cost_4 = 150
 
 if age < 18:
-    print(f'Fee {cost_1 * nights}')
+    print(f'Fee {cost_1 * nights} PLN')
 elif age >= 18 and age < 65 and nights < 2:
-    print(f'Fee {cost_2 * nights}')
+    print(f'Fee {cost_2 * nights} PLN')
 elif age >= 18 and age < 65 and nights >= 2 and nights < 5:
-    print(f'Fee {cost_3 * nights}')
+    print(f'Fee {cost_3 * nights} PLN')
 elif age >= 18 and age < 65 and nights >= 5:
-    print(f'Fee {cost_4 * nights}')
+    print(f'Fee {cost_4 * nights} PLN')
 elif age >= 65 and nights < 2:
-    print(f'Fee {cost_2 * nights - (night* cost_2 * 0.1)}')
+    print(f'Fee {cost_2 * nights - (night* cost_2 * 0.1)} PLN')
 elif age >= 65 and nights >= 2 and nights < 5:
-    print(f'Fee {cost_ * nights - (nights * cost_3 * 0.1)}')
+    print(f'Fee {cost_ * nights - (nights * cost_3 * 0.1)} PLN')
 elif age >= 65 and nights >= 5:
-    print(f'Fee {cost_4 * nights - (nights * cost_4 * 0.1)}')
+    print(f'Fee {cost_4 * nights - (nights * cost_4 * 0.1)} PLN')
 
 
 

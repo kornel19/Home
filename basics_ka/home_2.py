@@ -8,20 +8,19 @@
 
 shoes_left = int(input('When you left your shoes at the shoemaker? (Monday=1, Sunday=7): '))
 repair_time = int(input('What is the waiting time for repair in days?: '))
-pickup = shoes_left + repair_time / 7
+pickup = int((shoes_left + repair_time) % 7)
 
-
-if pickup >= 0.14:
+if pickup == 1:
     print('You should pickup your shoes on Monday')
-elif pickup >= 0.28:
+elif pickup == 2:
     print('You should pickup your shoes on Tuesday')
-elif pickup >= 0.42:
+elif pickup == 3:
     print('You should pickup your shoes on Wednesday')
-elif pickup >= 0.57:
+elif pickup == 4:
     print('You should pickup your shoes on Thursday')
-elif pickup >= 0.71:
+elif pickup == 5:
     print('You should pickup your shoes on Friday')
-elif pickup >= 0.85:
+elif pickup == 6:
     print('You should pickup your shoes on Saturday')
-elif pickup >= 0:
+elif pickup == 0:
     print('You should pickup your shoes on Sunday')
